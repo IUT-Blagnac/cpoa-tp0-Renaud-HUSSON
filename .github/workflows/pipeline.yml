@@ -13,9 +13,9 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn --batch-mode clean package -DskipTests
+        run: cd TP0 && mvn --batch-mode clean package -DskipTests
       - name: Store JAR file
         uses: actions/upload-artifact@v2
         with:
           name: app
-          path: target/tp0-SHADED.jar
+          path: TP0/target/tp0-SHADED.jar
